@@ -37,7 +37,7 @@ export const profileData: ProfileData = {
     },
     {
       label: 'Clinical Internship',
-      value: '2.5 Yrs',
+      value: '6 month',
       description: 'Hands-on hospital clinical training at TMSS Nursing Institute',
     },
     {
@@ -63,7 +63,7 @@ export const profileData: ProfileData = {
     {
       platform: 'github',
       label: 'GitHub (msi_dev)',
-      url: 'https://github.com/msi_dev',
+      url: 'https://github.com/msi-dev',
       iconName: 'Github',
     },
     {
@@ -82,8 +82,8 @@ export const profileData: ProfileData = {
 
   devProfiles: [
     {
-      name: 'msi_dev',
-      username: 'msi_dev',
+      name: 'msi-dev',
+      username: 'msi-dev',
       url: 'https://github.com/msi_dev',
       platform: 'GitHub',
     },
