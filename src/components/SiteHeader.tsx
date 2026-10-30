@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { NavLink, Link, useLocation } from 'react-router-dom';
 import { ThemeToggle } from './ThemeToggle.tsx';
 import { M3Button } from './M3Button.tsx';
-import { Menu, X, ArrowUpRight } from 'lucide-react';
+import { Menu, X, ArrowUpRight, Code2 } from 'lucide-react';
 
 import { profileData } from '../data/profile.ts';
 
@@ -22,12 +22,30 @@ export const SiteHeader: React.FC = () => {
   return (
     <header className="sticky top-0 z-40 w-full backdrop-blur-md bg-[var(--md-sys-color-surface)]/90 border-b border-[var(--md-sys-color-surface-container-highest)] transition-colors duration-200">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-8">
-        {/* Zone 1: Brand Wordmark (Single Text Element) */}
+        {/* Zone 1: Brand Wordmark with Logo & Behind-Heading Icon */}
         <Link
           to="/"
-          className="text-lg font-bold tracking-tight text-[var(--md-sys-color-on-surface)] hover:text-[var(--md-sys-color-primary)] transition-colors whitespace-nowrap shrink-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--md-sys-color-primary)] rounded px-1 -mx-1"
+          className="group relative flex items-center gap-3 text-lg font-bold tracking-tight text-[var(--md-sys-color-on-surface)] hover:text-[var(--md-sys-color-primary)] transition-colors whitespace-nowrap shrink-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--md-sys-color-primary)] rounded-2xl py-1 px-1 -mx-1"
         >
-          {profileData.name}
+          {/* Ambient decorative watermark icon behind heading text */}
+          <div
+            aria-hidden="true"
+            className="absolute -top-1 left-9 w-12 h-12 text-[var(--md-sys-color-primary)] opacity-10 dark:opacity-20 pointer-events-none select-none transition-transform duration-300 group-hover:scale-110 -z-10"
+          >
+            <Code2 className="w-full h-full" />
+          </div>
+
+          {/* Brand Logo Monogram / Emblem */}
+          <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-[var(--md-sys-color-primary)] to-[var(--md-sys-color-tertiary)] text-[var(--md-sys-color-on-primary)] flex items-center justify-center font-extrabold text-xs tracking-wider shadow-sm shrink-0 border border-white/10 group-hover:shadow-[var(--md-elevation-1)] transition-shadow">
+            <span>MSI</span>
+          </div>
+
+          <div className="flex flex-col relative z-0">
+            <span className="leading-tight font-extrabold">{profileData.name}</span>
+            <span className="text-[10px] font-semibold tracking-wider uppercase text-[var(--md-sys-color-primary)] -mt-0.5">
+              Portfolio
+            </span>
+          </div>
         </Link>
 
         {/* Zone 2: 4–5 Clean Single-Line Text Nav Links */}

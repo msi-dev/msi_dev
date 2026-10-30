@@ -9,6 +9,14 @@
   html {
     scroll-behavior: smooth;
     color-scheme: light;
+    overflow-x: clip;
+    width: 100%;
+  }
+
+  body {
+    overflow-x: clip;
+    width: 100%;
+    min-height: 100%;
   }
 
   html.dark {
@@ -19,6 +27,29 @@
   :focus-visible {
     outline: 2px solid var(--md-sys-color-primary);
     outline-offset: 2px;
+  }
+}
+
+/* App-wide Smooth Scale Hover Visual Feedback */
+.app-scale-shell {
+  transform-origin: 50% 0%;
+  transition: transform 600ms cubic-bezier(0.16, 1, 0.3, 1), filter 600ms cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: transform;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  body:hover .app-scale-shell,
+  .app-scale-shell:hover {
+    transform: scale(1.0035);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .app-scale-shell,
+  body:hover .app-scale-shell,
+  .app-scale-shell:hover {
+    transform: none !important;
+    transition: none !important;
   }
 }
 

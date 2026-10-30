@@ -63,6 +63,7 @@ export interface EducationItem {
   status?: 'Completed' | 'Incomplete' | 'Discontinued' | 'Ongoing';
   durationYears?: string;
   internshipExperience?: string;
+  discontinuedDetails?: string;
   yearSubjects?: EducationYearSubjects[];
   location: string;
   gpa?: string;

@@ -27,27 +27,30 @@ export default function App() {
     <BrowserRouter>
       <ScrollToTop />
       <div className="min-h-screen flex flex-col bg-[var(--md-sys-color-surface)] text-[var(--md-sys-color-on-surface)] selection:bg-[var(--md-sys-color-primary-container)] selection:text-[var(--md-sys-color-on-primary-container)]">
-        {/* Top Header Bar */}
+        {/* Top Header Bar (sticky to viewport) */}
         <SiteHeader />
 
-        {/* Main Content Area */}
-        <main className="flex-grow">
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/projects" element={<Projects />} />
-            <Route path="/skills" element={<Skills />} />
-            <Route path="/education" element={<Education />} />
-            <Route path="/hobbies" element={<Hobbies />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="*" element={<Navigate to="/" replace />} />
-          </Routes>
-        </main>
+        {/* Scalable App Content Shell (scales smoothly on hover) */}
+        <div className="app-scale-shell flex-grow flex flex-col">
+          {/* Main Content Area */}
+          <main className="flex-grow">
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/projects" element={<Projects />} />
+              <Route path="/skills" element={<Skills />} />
+              <Route path="/education" element={<Education />} />
+              <Route path="/hobbies" element={<Hobbies />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/contact" element={<Contact />} />
+              <Route path="*" element={<Navigate to="/" replace />} />
+            </Routes>
+          </main>
 
-        {/* Global Footer */}
-        <SiteFooter />
+          {/* Global Footer */}
+          <SiteFooter />
+        </div>
 
-        {/* Mobile Material 3 Docked Bottom Nav */}
+        {/* Mobile Material 3 Docked Bottom Nav (fixed to viewport) */}
         <MobileBottomNav />
       </div>
     </BrowserRouter>

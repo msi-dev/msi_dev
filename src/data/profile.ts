@@ -509,16 +509,17 @@ export const profileData: ProfileData = {
       institution: 'TMSS Nursing Institute',
       degree: 'Diploma In Nursing Science and Midwifery',
       fieldOfStudy: 'Nursing Science & Clinical Midwifery',
-      startDate: '2021',
-      endDate: '2023',
+      startDate: '2023',
+      endDate: '2024',
       isCurrent: false,
       status: 'Discontinued',
-      durationYears: '3-Year Course (Completed 2 Years 6 Months)',
+      discontinuedDetails: '1st year complete, 2nd year 6 month Discontinued',
+      durationYears: '3-Year Course (1st year complete, 2nd year 6 month Discontinued)',
       internshipExperience: 'Completed 2 Years 6 Months of Comprehensive Hospital Internship & Clinical Experience',
       location: 'Birganj, Dinajpur, Bangladesh',
       gpa: '3.69 / 4.00 (1st Year GPA)',
       description:
-        'Enrolled in 3-year professional Diploma in Nursing Science and Midwifery. Completed 2 years and 6 months including rigorous hospital clinical and internship experience before course discontinuation. Attained an outstanding 1st year GPA of 3.69 out of 4.00.',
+        'Enrolled in 3-year professional Diploma in Nursing Science and Midwifery (2023 – 2024). 1st year complete, 2nd year 6 month Discontinued. Completed 2 years and 6 months of hospital clinical internship experience before course discontinuation. Attained an outstanding 1st year GPA of 3.69 out of 4.00.',
       yearSubjects: [
         {
           yearName: '1st Year Subjects',

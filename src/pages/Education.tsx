@@ -136,6 +136,14 @@ export const Education: React.FC = () => {
                     </span>
                   </div>
 
+                  {/* Discontinued / Status Details */}
+                  {edu.discontinuedDetails && (
+                    <div className="flex items-center gap-2.5 p-3.5 rounded-2xl bg-amber-500/10 border border-amber-500/25 text-amber-800 dark:text-amber-200 text-xs sm:text-sm font-medium">
+                      <AlertCircle className="w-4 h-4 shrink-0 text-amber-600 dark:text-amber-400" />
+                      <span>{edu.discontinuedDetails}</span>
+                    </div>
+                  )}
+
                   {/* Overview Description */}
                   <p className="text-xs sm:text-sm text-[var(--md-sys-color-on-surface-variant)] leading-relaxed">
                     {edu.description}
